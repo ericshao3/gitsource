@@ -46,7 +46,6 @@ class Mysql(object):
 
     def __del__(self):
         pass
-
     @staticmethod
     def startConnPool():
         if Mysql.__pool is None:
