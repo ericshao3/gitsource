@@ -95,6 +95,6 @@ class dbhelper(Mysql):
         sql = sql % param
         return sql
 
-dbhelper = dbhelper()
-print dbhelper.updateTable("pec_account_record", data={"identity_id": "10", "order_id": "10"}, where=[["id", 4]])
-dbhelper.commit()
+# dbhelper = dbhelper()
+# print dbhelper.updateTable("pec_account_record", data={"identity_id": "10", "order_id": "10"}, where=[["id", 4]])
+# dbhelper.commit()
