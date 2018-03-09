@@ -6,7 +6,9 @@ from MySQLdb.cursors import DictCursor
 from DBUtils.PersistentDB import PersistentDB
 # import Common.gl as gl
 # from Config.settings import db_config
-import config
+import conf.settings
+from conf.settings import db_config
+
 
 mincached = 1
 maxcached = 1
@@ -56,7 +58,7 @@ class Mysql(object):
             #                         host=db["host"], port=db["port"], user=db["user"], passwd=db["password"],
             #                         db=db["db"],
             #                         use_unicode=False, charset='utf8', cursorclass=DictCursor)
-            db = config.db_config
+            db = db_config
             Mysql.__pool = PersistentDB(MySQLdb, maxusage=maxusage, setsession=setsession, failures=failures, ping=ping,
                                         host=db["host"], port=db["port"], user=db["user"], passwd=db["password"],
                                         db=db["db"], use_unicode=False, charset='utf8', cursorclass=DictCursor)
